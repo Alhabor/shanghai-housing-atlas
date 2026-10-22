@@ -15,13 +15,12 @@
 ## 独立性
 
 - 页面运行时不读取 `area_research/` 或 `rental_market_research/`。
-- `data/research-snapshot.json` 是便于审计的格式。
-- `assets/research-snapshot.js` 是供本地HTML直接读取的同一份快照。
+- 仓库提供的快照文件是 `assets/research-snapshot.js`，供本地HTML直接读取。
 - 两个专项研究仍是事实来源；综合层不反向修改它们。
 
 ## 更新快照
 
-当专项研究数据改变后，在工作区根目录运行：
+更新脚本位于公共仓库之外的本地工作区，仓库中不包含该脚本；在该工作区根目录运行：
 
 ```bash
 python3 housing_research_atlas/tools/update-snapshots.py
